@@ -12,8 +12,8 @@ pipeline {
 	stage('git checkout') {
             steps 
 		{
-			pwd
-			ls -la
+			sh 'pwd'
+			sh 'ls -la'
             }
         }
    }
