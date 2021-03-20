@@ -7,30 +7,14 @@ pipeline {
             	checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/panthinp3/spring-petclinic.git']]])
             }
         }
-
-
-	stage('path') {
-            steps 
-		{
-			sh 'pwd'
-			sh 'ls -la'
-            }
-        }
             
             
-            stage('test') {
-            steps 
-		{
-			sh 'mvn -eX test '
-                       
-            }
-        }
             
             
             stage('compile') {
             steps 
 		{
-                       sh 'mvn compile'
+                       sh './mvnw package'
             }
         }
             
@@ -38,7 +22,8 @@ pipeline {
             stage('build') {
             steps 
 		{
-                        sh 'mvn build'
+                        
+                        sh 'java -jar target/*.jar'
             }
         }
             
