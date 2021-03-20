@@ -9,7 +9,7 @@ pipeline {
         }
 
 
-	stage('git checkout') {
+	stage('path') {
             steps 
 		{
 			sh 'pwd'
