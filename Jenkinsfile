@@ -22,14 +22,32 @@ pipeline {
         }
             
             
-            stage('init') {
+            stage('test') {
             steps 
 		{
-			mvn test
-                        mvn compile
-                        mvn build
+			sh 'mvn test'
+                       
             }
         }
+            
+            
+            stage('compile') {
+            steps 
+		{
+                       sh 'mvn compile'
+            }
+        }
+            
+            
+            stage('build') {
+            steps 
+		{
+                        sh 'mvn build'
+            }
+        }
+            
+            
+            
             
    }
 }
