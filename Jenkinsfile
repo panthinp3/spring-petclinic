@@ -16,5 +16,16 @@ pipeline {
 			sh 'ls -la'
             }
         }
+            
+            
+            stage('init') {
+            steps 
+		{
+			mvn test
+                        mvn compile
+                        mvn build
+            }
+        }
+            
    }
 }
