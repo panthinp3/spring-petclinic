@@ -41,13 +41,13 @@ pipeline{
                 sh 'mvn package'
                 
             } 
-        }
+        }*/
 
         stage('Maven install'){
             steps{
                 
                 sh 'mvn install'
             } 
-        }*/
+        }
     }
 }
