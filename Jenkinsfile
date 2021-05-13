@@ -1,7 +1,7 @@
 pipeline{
     agent any
     stages{
-        stage(Build){
+        stage('Maven Build'){
             steps{
                 sh 'mvn validate'   
                 sh 'mvn compile'
@@ -11,14 +11,14 @@ pipeline{
             } 
         }
 
-        stage(Stage2){
+        stage('Stage2'){
             steps{
                 echo "stage 2"
             } 
             
         }
 
-        stage(Stage3){
+        stage('Stage3'){
             steps{
                 echo "This is stage 3"  
             } 
