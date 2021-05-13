@@ -1,6 +1,17 @@
 pipeline{
     agent any
     stages{
+
+        stage('Run'){
+            steps{
+                sh './mvnw package'  
+                sh 'java -jar target/*.jar' 
+                
+            } 
+        }
+
+
+        /*
         stage('Maven validate'){
             steps{
                 sh 'mvn validate'   
@@ -37,6 +48,6 @@ pipeline{
                 
                 sh 'mvn install'
             } 
-        }
+        }*/
     }
 }
