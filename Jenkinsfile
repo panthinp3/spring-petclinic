@@ -9,7 +9,7 @@ pipeline{
 
         stage(Stage2){
             steps{
-                sh pwd
+                echo "stage 2"
             } 
             
         }
