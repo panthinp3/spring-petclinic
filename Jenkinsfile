@@ -7,8 +7,8 @@ pipeline{
     
     
     parameters{
-        String(name: 'User_Name', defaultvalue: 'Hari', description: 'This is the name of the employee')
-        booleanParam(name: 'Open', defaultvalue: False, description: 'Is this business open today?')
+        string(name: 'User_Name', defaultValue: 'Hari', description: 'This is the name of the employee')
+        booleanParam(name: 'Open', defaultValue: False, description: 'Is this business open today?')
         choice(name: 'Employee_ID', choices: ['10001', '1002', '1003'], description: 'Pick your emp ID')
         password(name: 'Password', defaultValue: '12345', description: 'Enter your password')
         
