@@ -9,7 +9,7 @@ pipeline{
     stages{
         
         
-         stage('Maven install'){
+         stage('Info'){
             steps{
                 echo "My first name is ${MY_FNAME}"
                 echo "My last name is ${MY_LNAME}"
