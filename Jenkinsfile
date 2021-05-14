@@ -1,18 +1,31 @@
 pipeline{
     agent any
-    
     environment{
         MY_FNAME= 'Nabin'
         MY_LNAME= 'Panthi'
     }
+    
+    
+    parameters{
+        String(name: 'User_Name', defaultvalue: 'Hari', description: 'This is the name of the employee')
+        booleanParam(name: 'Open', defaultvalue: False, description: 'Is this business open today?')
+        choice(name: 'Employee_ID', choices: ['10001', '1002', '1003'], description: 'Pick your emp ID')
+        password(name: 'Password', defaultValue: '12345', description: 'Enter your password')
+        
+    }
+    
+    
     
     stages{
         
         
          stage('Info'){
             steps{
-                echo "My first name is ${MY_FNAME}"
-                echo "My last name is ${MY_LNAME}"
+                echo "Employee name: ${params.User_Name}"
+                echo "Employee ID: ${params.Employee_ID}"
+                echo "Emp password: ${params.Password}"
+                echo "Status: ${params.Open}"
+                
                 
                 /*sh 'mvn install'*/
             } 
