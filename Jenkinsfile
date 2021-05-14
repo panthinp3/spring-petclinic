@@ -1,52 +1,34 @@
 pipeline{
     agent any
+    
+    
+    
     stages{
 
         stage('Run'){
+            when{
+                expression{
+                    BRANCH_NAME=='main'
+                }
+            }
+            
             steps{
-                sh './mvnw package'  
-                sh 'java -jar target/*.jar' 
+                ehco 'Checking out run stage'
+               /* sh './mvnw package'  
+                sh 'java -jar target/*.jar' */
                 
             } 
         }
-
-
-        /*
-        stage('Maven validate'){
-            steps{
-                sh 'mvn validate'   
-                
-            } 
-        }
-
-        stage('Maven compile'){
-            steps{
-                   
-                sh 'mvn compile'
-                
-            } 
-        }
-
-        stage('Maven test'){
-            steps{
-               
-                sh 'mvn test'
-                
-            } 
-        }
-
-        stage('Maven package'){
-            steps{
-                
-                sh 'mvn package'
-                
-            } 
-        }*/
+        
+        
+        
+        
 
         stage('Maven install'){
             steps{
+                ehco 'Checking out run install stage'
                 
-                sh 'mvn install'
+                /*sh 'mvn install'*/
             } 
         }
     }
