@@ -22,9 +22,11 @@ pipeline{
          stage('Info'){
             steps{
                 echo "Employee name: ${params.USER_NAME}"
-                 echo "Employee ID: ${params.EMPLOYEE_ID}"
+                echo "Status: ${params.OPEN}"
+                 
                 /*  echo "Emp password: ${params.PASSWORD}"
-                echo "Status: ${params.OPEN}" */
+                echo "Employee ID: ${params.EMPLOYEE_ID}"
+                 */
                 
                 
                 /*sh 'mvn install'*/
