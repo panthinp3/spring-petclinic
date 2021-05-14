@@ -8,9 +8,9 @@ pipeline{
     
     parameters{
         string(name: 'USER_NAME', defaultValue: 'Hari', description: 'This is the name of the employee')
-        booleanParam(name: 'OPEN', defaultValue: False, description: 'Is this business open today?')
+       /* booleanParam(name: 'OPEN', defaultValue: False, description: 'Is this business open today?')
         choice(name: 'EMPLOYEE_ID', choices: ['10001', '1002', '1003'], description: 'Pick your emp ID')
-        password(name: 'PASSWORD', defaultValue: '12345', description: 'Enter your password')
+        password(name: 'PASSWORD', defaultValue: '12345', description: 'Enter your password') */
         
     }
     
@@ -22,9 +22,9 @@ pipeline{
          stage('Info'){
             steps{
                 echo "Employee name: ${params.USER_NAME}"
-                echo "Employee ID: ${params.EMPLOYEE_ID}"
+               /* echo "Employee ID: ${params.EMPLOYEE_ID}"
                 echo "Emp password: ${params.PASSWORD}"
-                echo "Status: ${params.OPEN}"
+                echo "Status: ${params.OPEN}" */
                 
                 
                 /*sh 'mvn install'*/
