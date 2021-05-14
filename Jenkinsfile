@@ -1,9 +1,24 @@
 pipeline{
     agent any
     
-    
+    environment{
+        MY_FNAME= 'Nabin'
+        MY_LNAME= 'Panthi'
+    }
     
     stages{
+        
+        
+         stage('Maven install'){
+            steps{
+                echo "My first name is ${MY_FNAME}"
+                echo "My last name is ${MY_LNAME}"
+                
+                /*sh 'mvn install'*/
+            } 
+        }
+        
+        
 
         stage('Run'){
             when{
@@ -31,5 +46,7 @@ pipeline{
                 /*sh 'mvn install'*/
             } 
         }
+        
+        
     }
 }
