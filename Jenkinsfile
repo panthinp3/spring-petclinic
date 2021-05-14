@@ -13,7 +13,7 @@ pipeline{
             }
             
             steps{
-                ehco 'Checking out run stage'
+                echo 'Checking out run stage'
                /* sh './mvnw package'  
                 sh 'java -jar target/*.jar' */
                 
@@ -26,7 +26,7 @@ pipeline{
 
         stage('Maven install'){
             steps{
-                ehco 'Checking out run install stage'
+                echo 'Checking out run install stage'
                 
                 /*sh 'mvn install'*/
             } 
