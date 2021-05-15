@@ -17,3 +17,5 @@ def maven_install(){
                 
                 /*sh 'mvn install'*/
 }
+
+return this
