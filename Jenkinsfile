@@ -30,9 +30,9 @@ pipeline{
         
          stage('Info'){
             steps{
-                
+                script{
                 call.info()
-               
+               }
             } 
         }
         
