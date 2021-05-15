@@ -5,7 +5,7 @@ pipeline{
         MY_LNAME= 'Panthi'
     }
 
-    def call
+   
     
     
     parameters{
@@ -23,14 +23,19 @@ pipeline{
 
         stage('Call'){
             steps{
-                call= load 'input.groovy'
+                script{
+                    call= load 'input.groovy'
+                }
+                
             }
         }
         
         
          stage('Info'){
             steps{
+                script{
                 call.info()
+               }
             } 
         }
         
@@ -44,8 +49,9 @@ pipeline{
             }
             
             steps{
+                script{
                 call.run()
-                
+                } 
             } 
         }
         
@@ -55,7 +61,9 @@ pipeline{
 
         stage('Maven install'){
             steps{
+                script{
                 call.maven_install()
+                }
             } 
         }
         
