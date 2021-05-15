@@ -6,10 +6,10 @@ pipeline{
         MY_LNAME= 'Panthi'
     }
         
-    script{
+    
         call= load 'input.groovy'
         call.parameter()
-    }
+    
     
     stages{
 
