@@ -50,7 +50,7 @@ pipeline{
             
             steps{
                 script{
-                call.run()
+                call.Run()
                 } 
             } 
         }
