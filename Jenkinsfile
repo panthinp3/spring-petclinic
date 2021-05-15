@@ -4,6 +4,8 @@ pipeline{
         MY_FNAME= 'Nabin'
         MY_LNAME= 'Panthi'
     }
+
+    def call
     
     
     parameters{
@@ -17,15 +19,18 @@ pipeline{
     
     
     stages{
+
+
+        stage('Call'){
+            steps{
+                call= load 'input.groovy'
+            }
+        }
         
         
          stage('Info'){
             steps{
-                echo "Employee name: ${params.USER_NAME}"
-                echo "Status: ${params.OPEN}"
-                echo "Emp password: ${params.PASSWORD}"
-                echo "Employee ID: ${params.EMPLOYEE_ID}"
-                
+                call.info()
             } 
         }
         
@@ -39,9 +44,7 @@ pipeline{
             }
             
             steps{
-                echo 'Checking out run stage'
-               /* sh './mvnw package'  
-                sh 'java -jar target/*.jar' */
+                call.run()
                 
             } 
         }
@@ -52,12 +55,17 @@ pipeline{
 
         stage('Maven install'){
             steps{
-                echo 'Checking out run install stage'
-                
-                /*sh 'mvn install'*/
+                call.maven_install()
             } 
         }
         
         
     }
 }
+
+
+
+
+
+
+
