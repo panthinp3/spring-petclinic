@@ -6,12 +6,8 @@ pipeline{
     }
 
    
-    
-    
-    script{
-        call=load 'input.groovy'
+        def call=load 'input.groovy'
         call.parameter()
-    }
     
     
     
