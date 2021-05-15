@@ -20,19 +20,19 @@ pipeline{
 
         stage('Call'){
             steps{
-                
+                script{
                     call= load 'input.groovy'
                 
-                
+                }
             }
         }
         
         
          stage('Info'){
             steps{
-                script{
+                
                 call.info()
-               }
+               
             } 
         }
         
