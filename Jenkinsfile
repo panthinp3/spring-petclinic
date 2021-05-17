@@ -5,19 +5,19 @@ pipeline{
     }
 
     stages{
-        stage(Checkout SCM){
+        stage('Checkout SCM'){
             steps{
                 echo "Checking out from SCM"
             }
         }
 
-        stage(Maven Package){
+        stage('Maven Package'){
             steps{
                 sh 'mvn clean package'
             }
         }
 
-        stage(Maven build){
+        stage('Maven build'){
             steps{
                 sh 'docker build . -t nabin_maven_proj'
             }
