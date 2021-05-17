@@ -4,4 +4,4 @@ WORKDIR /source
 
 ADD . /source
 
-CMD [ "java", "-jar", "target/*.jar" ]
+CMD [ "java", "-jar", "*.jar" ]
