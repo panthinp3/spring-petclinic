@@ -5,7 +5,7 @@ def info(){
                 echo "Employee ID: ${params.EMPLOYEE_ID}"
 }
 
-def run(){
+def Run(){
     echo 'Checking out run stage'
                /* sh './mvnw package'  
                 sh 'java -jar target/*.jar' */
@@ -17,3 +17,5 @@ def maven_install(){
                 
                 /*sh 'mvn install'*/
 }
+
+return this
