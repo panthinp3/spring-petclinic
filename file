@@ -1,9 +1,7 @@
 FROM openjdk:8
 
-EXPOSE 9000
+WORKDIR /source
 
-COPY . /bin
+ADD . /source
 
-CMD [ "java", "./mvn package"]
-
-ENTRYPOINT [ "java", "-jar", "target/*.jar" ]
+CMD [ "java", "-jar", "target/*.jar" ]
