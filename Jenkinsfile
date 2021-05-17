@@ -5,11 +5,6 @@ pipeline{
     }
 
     stages{
-        stage('Checkout SCM'){
-            steps{
-                echo "Checking out from SCM"
-            }
-        }
 
         stage('Maven Package'){
             steps{
