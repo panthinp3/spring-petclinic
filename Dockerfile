@@ -5,8 +5,8 @@ WORKDIR /proj
 
 ADD . /proj
 
-RUN ["/proj/spring-petclinic", "mvn clean package"]
-RUN ["/proj/spring-petclinic",  "mvn clean install"]
+RUN ["/proj", "mvn clean package"]
+RUN ["/proj",  "mvn clean install"]
 
             
 
