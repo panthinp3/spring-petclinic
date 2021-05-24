@@ -5,6 +5,9 @@ WORKDIR /proj
 
 ADD . /proj
 
+RUN pwd
+RUN ls
+
 RUN ["/proj", "mvn clean package"]
 RUN ["/proj",  "mvn clean install"]
 
