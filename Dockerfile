@@ -1,5 +1,5 @@
 FROM openjdk:8
 
-RUN ./mvnw spring-boot
+EXPOSE 8081
 
-CMD [ "java", "-jar", "target/*.jar" ]
+CMD [ "echo", "Hello World" ]
