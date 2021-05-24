@@ -1,7 +1,5 @@
 FROM openjdk:8
 
-WORKDIR /source
+RUN ./mvnw spring-boot
 
-ADD . /source
-
-CMD [ "java", "-jar", "spring-petclinic-2.4.2.jar" ]
+CMD [ "java", "-jar", "target/*.jar" ]
