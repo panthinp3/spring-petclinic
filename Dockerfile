@@ -8,7 +8,7 @@ ADD . /proj
 RUN pwd
 RUN ls
 
-RUN  mvn clean package
+
 RUN mvn clean install
 
             
