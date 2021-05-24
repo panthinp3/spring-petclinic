@@ -6,12 +6,12 @@ pipeline{
 
     stages{
 
-        stage('Maven Package'){
+       /* stage('Maven Package'){
             steps{
                 sh 'mvn clean package'
                 sh 'mvn clean install'
             }
-        }
+        }*/
 
         stage('Maven build'){
             steps{
